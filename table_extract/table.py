@@ -1,8 +1,6 @@
 import tabula
 
-file = "7-series-product-selection-guide.pdf"
-table = tabula.read_pdf(file, pages = 1)
-print(table[0])
 
-
-#tabula.convert_into("7-series-product-selection-guide.pdf", "tablecal.ods", all = True)
+file = "input.pdf"
+# extract table from pdf file to csv file
+tabula.convert_into(file, "output.csv", pages="all")
